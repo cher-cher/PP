@@ -8,8 +8,9 @@ public:
 	CMatrix();
 	~CMatrix() = default;
 	void Print();
+	friend std::ostream& operator<<(std::ostream& os, const Matrix & inputMatrix);
 	Matrix GetMatrix() const;
 	void GenerateMatrix(size_t sizeMatrix);
 private:
-	Matrix m_inputMatrix;
+	std::vector<std::vector<float>> m_inputMatrix;
 };

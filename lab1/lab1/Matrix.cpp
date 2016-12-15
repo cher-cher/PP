@@ -38,3 +38,16 @@ Matrix CMatrix::GetMatrix() const
 {
 	return m_inputMatrix;
 }
+
+ostream & operator<<(ostream & os, const Matrix & inputMatrix)
+{
+	for (size_t i = 0; i < inputMatrix.size(); i++)
+	{
+		for (size_t j = 0; j < inputMatrix[0].size(); j++)
+		{
+			os << inputMatrix[i][j] << " ";
+		}
+		os << endl;
+	}
+	return os;
+}

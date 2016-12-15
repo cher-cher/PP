@@ -28,6 +28,9 @@ size_t CParallelMatrixRank::MatrixRank(Matrix matrix)
 	for (size_t i = 0; i <= m_numbThreads - 1; i++)
 	{
 		threads[i] = thread(CalculateRankOnThread, this, i);
+	}
+	for (size_t i = 0; i <= m_numbThreads - 1; i++)
+	{
 		threads[i].join();
 	}
 	return m_rank;

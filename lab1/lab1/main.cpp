@@ -12,7 +12,6 @@ int main(int argc, char * argv[])
 {
 	CMatrix matrix;
 	matrix.GenerateMatrix(atoi(argv[1]));
-	matrix.Print();
 
 	size_t threadsCount = atoi(argv[2]);
 
